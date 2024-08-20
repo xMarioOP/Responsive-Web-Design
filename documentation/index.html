@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Documentation</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header id="nav-header">JS Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#What_is_JavaScript">What is JavaScript?</a></li>
+      <li><a class="nav-link" href="#Browser_Console">Browser Console</a></li>
+      <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+      <li><a class="nav-link" href="#Comparison_Operators">Comparison Operators</a></li>
+      <li><a class="nav-link" href="#Logical_Operators">Logical Operators</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="What_is_JavaScript">
+      <header>What is JavaScript?</header>
+      <p>JavaScript is one of the most widely used and popular programming languages in the world. It was born in 1995
+        to
+        add interactivity to web pages and has since evolved into a general-purpose programming language. In other
+        words:
+        it can be used for almost anything.
+      </p>
+      <blockquote>
+        <p>What is programming? It's the act of constructing a program or set of instructions to tell a computer what
+          and
+          how we want it to do something. It's no different from when we "program" a washing machine, only instead of
+          pressing a button, we are going to use text. This text is known as "code."</p>
+      </blockquote>
+    </section>
+
+    <section class="main-section" id="Browser_Console">
+      <header>Browser Console</header>
+      <p>To follow the course and test what you're doing, you'll need a web browser for now. You probably already have
+        one
+        installed; if not, I recommend installing Google Chrome or Brave Browser. All browsers have a tool called a
+        console. The console allows us to execute JavaScript code in real-time and see the result. We can also see
+        errors,
+        warnings, and traces produced in our code. Although we can execute JavaScript code in other ways, to start,
+        we're
+        going to use this tool provided by the browser.</p>
+      <p>To open the browser console, do the following:</p>
+      <ol>
+        <li>Open your favorite web browser, for example, Google Chrome.</li>
+        <li>Go to the about:blank page in the address bar. This way, the web page we've loaded won't bother us.</li>
+        <li>Right-click anywhere on the page and select the Inspect Element or Inspect option.</li>
+        <li>Click on Console.</li>
+        <li>You can now enter your JavaScript code.</li>
+      </ol>
+    </section>
+
+    <section class="main-section" id="Data_Types">
+      <header>Data Types</header>
+      <p>In JavaScript, like any other programming language, we're going to want to translate real-world information
+        into
+        our code. To do this, we need to understand what data types exist in the language to represent the information
+        we
+        need. In JavaScript, we have 9 data types that are divided into two large groups: primitive or non-primitive.
+        I'll
+        explain what this means later, but for now, let's look at the primitive types.</p>
+      <p>Among the primitive types, we have 7 data types: <strong><i>number, string, boolean, null, undefined, symbol,
+            bigint</i></strong></p>
+    </section>
+
+    <section class="main-section" id="Comparison_Operators">
+      <header>Comparison Operators</header>
+      <p>Comparison operators in JavaScript allow us to compare two values. They always return a boolean value (true or
+        false). For example, we can compare if one number is greater than another with the > operator, or if one number
+        is
+        less than another with the &lt; operator.</p>
+      <code>
+          5 > 3 // true<br>
+          5 &lt; 3 // false
+        </code>
+      <p>We also have the >= and &lt;= operators that allow us to compare if a number is greater than or equal to
+        another,
+        or if a number is less than or equal to another.</p>
+      <code>
+          5 >= 3 // true<br>
+          5 >= 5 // true<br>
+          5 &lt;= 3 // false<br>
+          5 &lt;= 5 // true<br>
+        </code>
+      <p>To check if two values are equal, we can use the === operator or, to see if they are different, the !==
+        operator.</p>
+      <code>
+          5 === 5 // true<br>
+          5 !== 5 // false<br>
+        </code>
+    </section>
+
+    <section class="main-section" id="Logical_Operators">
+      <header>Logical Operators</header>
+      <p>Logical operators in JavaScript (and in many other programming languages) are used to evaluate logical
+        expressions. In JavaScript, there are three logical operators: AND (&&), OR (||), and NOT (!).</p>
+      <p>Logical AND operator &&: The logical AND operator is denoted by &&. It returns true when both values it
+        connects
+        are true.</p>
+      <code>
+          true && true // → true<br>
+          true && false // → false<br>
+          false && false // → false<br>
+        </code>
+      <p>Logical OR operator ||: The logical OR operator is denoted by || and returns true when either of the values it
+        connects is true.</p>
+      <code>
+          true || true // → true<br>
+          true || false // → true<br>
+          false || false // → false<br>
+        </code>
+      <p>Logical NOT operator !: The logical NOT operator is denoted by ! and inverts the value of a boolean. It is
+        placed
+        in front of the value we want to invert.</p>
+      <code>
+          !true // → false<br>
+          !false // → true<br>
+        </code>
+      <p>Combining logical, arithmetic, and comparison operators: Logical operators and comparison operators can be
+        combined to create more complex expressions. For example, we can ask if a number is between two values.</p>
+      <code>
+          2 &lt; 3 && 3 &lt; 4 // → true
+        </code>
+      <p>You can also use parentheses to group operations and use logical and arithmetic operators.</p>
+      <code>
+          (2 + 2) &lt; 3 && (10 &lt; (8 * 2)) // → false
+        </code>
+      <p>Likewise, it's important to know that arithmetic operations take precedence over comparison operations.</p>
+      <code>
+          2 + 2 &lt; 3 && 10 &lt; 8 * 2<br>
+          // First, arithmetic operations are performed:<br>
+          // → 4 &lt; 3 && 10 &lt; 16<br>
+          // Now the comparisons:<br>
+          // → false && true<br>
+          // Finally:<br>
+          // → false<br>
+        </code>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
