@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  position: relative;
+  min-height: 100vh; /* Asegura que el contenido cubra al menos la altura de la pantalla */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://s3.amazonaws.com/rtvc-assets-senalcolombia.gov.co/s3fs-public/field/image/cinco-razones-querer-league-of-legends-articulo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+/* HEADER */
+#header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+}
+
+#header-img2 {
+  width: 26px;
+}
+
+#header-img {
+  width: 120px;
+  margin-right: 18px;
+}
+
+#nav-bar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: color 0.4s;
+}
+
+#nav-bar a:hover {
+  color: #737373;
+}
+
+/* VIDEO */
+.lol-video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  overflow: hidden;
+}
+
+.lol-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lol-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0; /* Removes iframe border */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+
+/* DESCRIPTION */
+.lol-description {
+  color: white;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+  font-size: 19px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* REGISTRO */
+.lol-registro {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px; /* Limita el ancho del formulario */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  border-radius: 10px;
+}
+
+.lol-registro input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.lol-registro input[type="submit"] {
+  background-color: #737373;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.4s;
+}
+
+.lol-registro input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* PADDING BETWEEN SECTIONS */
+.lol-video,
+.lol-description,
+.lol-registro,
+footer {
+  padding: 35px 20px;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.social-list {
+  list-style-type: none;
+  font-size: 2rem;
+  letter-spacing: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  transition: color 0.4s;
+}
+
+footer a:hover {
+  color: #737373;
+}
+
+.footer-logo {
+  padding: 10px;
+  filter: brightness(50%);
+  transition: transform 0.4s, filter 0.4s;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+.lol-copyright {
+  color: white;
+  text-align: center;
+  max-width: 800px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 763px) {
+  #nav-bar {
+      display: none;
+  }
+  
+  .lol-description {
+      font-size: 16px;
+      padding: 20px;
+  }
+}
