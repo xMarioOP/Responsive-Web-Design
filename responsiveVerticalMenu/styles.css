@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.collapsed{
+    display: none;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+nav .mobile{
+    display: none;
+}
+
+nav .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button{
+    border: none;
+    background-color: black ;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav .logo{
+    min-width: 250px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav a:hover{
+    color:black;
+    background-color: #00c3ff;
+}
+
+nav .desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+    display: flex;
+}
+
+nav .desktop .secondary.mini{
+    display: none;
+}
+
+@media screen and (max-width: 893px) {
+    nav .logo{
+        min-width: 100px;
+    }
+
+    nav .secondary.full{
+        display: none;
+    }
+
+    nav .secondary.mini{
+        display: block !important;
+    }
+
+    nav .secondary.mini .submenu{
+        background-color: black;
+        position:absolute;
+        display: none;
+    }
+
+    nav .secondary.mini:hover .submenu{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    nav .desktop{
+        display: none;
+    }
+
+    nav .mobile{
+        display: block;
+    }
+}
