@@ -1,0 +1,45 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-spacing: 0;
+    /* SPACE BETWEEN BORDERS */
+    border-collapse: collapse;
+    /* SINGLE BORDER, NO DOUBLE BORDER */
+    width: 800px;
+    margin: 100px auto;
+    /* CENTER TABLE */
+}
+
+/* APPLIES BORDERS TO ALL CELLS */
+td,
+th {
+    border: solid 1px #ccc;
+    padding: 5px;
+}
+
+/* ALTERNATING ROW COLORS USING TR AND THE nth-child PROPERTY TO COLOR EVERY OTHER ROW */
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+/* CENTER ALIGN ALL DATA IN TD AND TH BASED ON THE nth-child CONDITION */
+td:nth-child(n +3),
+th:nth-child(n +3) {
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: rgb(160, 222, 225) !important;
+}
+
+/* MAKES THE TABLE HEADER STICKY WHILE SCROLLING */
+thead {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+}
